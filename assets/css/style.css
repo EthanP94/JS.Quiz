@@ -7,7 +7,7 @@
     --teal: #008080;
     --purple: #800080;
     --white: #FFFFFF;
-    font-size: 1em;
+    font-size: 65%;
   }
 
   body {
@@ -16,4 +16,36 @@
     margin: 0;
     padding: 0;
     font-family:'Exo 2', sans-serif;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  header h4 {
+    padding-left: 30px;
+    font-size: 1rem;
+    display: inline;
+  }
+
+  #view-high-scores:hover {
+    cursor: pointer;
+    color: teal;
+  }
+
+  .timer {
+    font: 1rem;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  .container {
+    padding: 15px;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
   }
