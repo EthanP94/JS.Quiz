@@ -110,18 +110,18 @@ var questions = [
 var setTimer = function () {
   timeLeft = 60;
 
-var timercheck = setInterval(function() {
+var timeCheck = setInterval(function() {
   timerEl.innerText = timeLeft;
   timeLeft--
 
   if (gameOver) {
-      clearInterval(time)
+      clearInterval(timeCheck)
   }
  
   if (timeLeft < 0) {
       showScore()
       timerEl.innerText = 0
-      clearInterval(time)
+      clearInterval(timeCheck)
   }
 
   }, 1000)
@@ -160,6 +160,92 @@ var displayQuestion = function(index) {
       }
   };
 
+  var answerCorrect = function() {
+    if (correctEl.className = "hide") {
+        correctEl.classList.remove("hide")
+        correctEl.classList.add("banner")
+        wrongEl.classList.remove("banner")
+        wrongEl.classList.add("hide")
+        }
+    }
+    var answerWrong = function() {
+      if (wrongEl.className = "hide") {
+          wrongEl.classList.remove("hide")
+          wrongEl.classList.add("banner")
+          correctEl.classList.remove("banner")
+          correctEl.classList.add("hide")
+      }
+  }
+  var answerCheck = function(event) {
+    var selectedanswer = event.target
+        if (arrayShuffleQuestions[QuestionIndex].a === selectedanswer.innerText){
+            answerCorrect()
+            score = score + 8
+        }
+
+        else {
+          answerWrong()
+          score = score - 2;
+          timeLeft = timeLeft - 5;
+      };
+
+      QuestionIndex++
+      if  (arrayShuffleQuestions.length > QuestionIndex + 1) {
+          setQuestion()
+      }   
+      else {
+         gameOver = "true";
+         showScore();
+          }
+}
+  var showScore = function () {
+  containerQuestionEl.classList.add("hide");
+  containerEndEl.classList.remove("hide");
+  containerEndEl.classList.add("show");
+
+    var scoreDisplay = document.createElement("p");
+    scoreDisplay.innerText = ("Your final score is " + score + "!");
+    containerScoreEl.appendChild(scoreDisplay);
+}      
+
+var createHighScore = function(event) { 
+  event.preventDefault() 
+  var initials = document.querySelector("#initials").value;
+  if (!initials) {
+    alert("Enter your intials!");
+    return;
+  }
+
+  formInitials.reset();
+///
+  var userScores = {
+    initials: initials,
+    score: score
+    } 
+
+    highScores.push(userScores);
+    highScores.sort((a, b) => {return b.score-a.score});
+
+    while (listHighScoreEl.firstChild) {
+      listHighScoreEl.removeChild(listHighScoreEl.firstChild)
+   }
+
+   for (var i = 0; i < highScores.length; i++) {
+    var highscoreEl = document.createElement("li");
+    highscoreEl.ClassName = "high-score";
+    highscoreEl.innerHTML = highScores[i].initials + " - " + highScores[i].score;
+    listHighScoreEl.appendChild(highscoreEl);
+  }
+
+  saveHighScore();
+  displayHighScores();
+
+}
+
+var saveHighScore = function () {
+  localStorage.setItem("HighScores", JSON.stringify(HighScores))
+      
+}
 
 
 
