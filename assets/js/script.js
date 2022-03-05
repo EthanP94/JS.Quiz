@@ -24,13 +24,14 @@ var timeLeft;
 var gameOver;
 timerEl.innerText = 0;
 var highScores = [];
-var userScores = JSON.parse(localStorage.getItem("scores")) || []
+
+/*var userScores = JSON.parse(localStorage.getItem("scores")) || []
 
 var userScore = {user:"",score:""}
 
 userScores.push(userScore)
 
-localStorage.setItem("scores",JSON.stringify(userScores))
+localStorage.setItem("scores",JSON.stringify(userScores))*/
 
 
 var questions = [
@@ -106,26 +107,62 @@ var questions = [
     }
 }
 
-var setTime = function () {
-  timeleft = 60;
+var setTimer = function () {
+  timeLeft = 60;
 
 var timercheck = setInterval(function() {
-  timerEl.innerText = timeleft;
-  timeleft--
+  timerEl.innerText = timeLeft;
+  timeLeft--
 
-  if (gameover) {
-      clearInterval(timercheck)
+  if (gameOver) {
+      clearInterval(time)
   }
  
-  if (timeleft < 0) {
+  if (timeLeft < 0) {
       showScore()
       timerEl.innerText = 0
-      clearInterval(timercheck)
+      clearInterval(time)
   }
 
   }, 1000)
 }
-  
+
+var startGame = function() {
+  containerStartEl.classList.add('hide');
+  containerStartEl.classList.remove('show');
+  containerQuestionEl.classList.remove('hide');
+  containerQuestionEl.classList.add('show');
+  arrayShuffleQuestions = questions.sort(() => Math.random() - 0.5)
+  setTimer()
+  setQuestion()
+}
+
+var setQuestion = function() {
+  resetAnswers()
+  displayQuestion(arrayShuffleQuestions[QuestionIndex])
+}
+
+var resetAnswers = function() {
+  while (answerbuttonsEl.firstChild) {
+      answerbuttonsEl.removeChild(answerbuttonsEl.firstChild)
+  };
+};
+
+var displayQuestion = function(index) {
+  questionEl.innerText = index.q
+  for (var i = 0; i < index.choices.length; i++) {
+      var answerbutton = document.createElement('button')
+      answerbutton.innerText = index.choices[i].choice
+      answerbutton.classList.add('btn')
+      answerbutton.classList.add('answerbtn')
+      answerbutton.addEventListener("click", answerCheck)
+      answerbuttonsEl.appendChild(answerbutton)
+      }
+  };
+
+
+
+
 // var position = 0
 //document.getElementById("questions").innerText = questions[position].q
 // button functions
