@@ -59,7 +59,7 @@ var questions = [
   },
   { q: 'How to write an IF statement in JavaScript?',
       a: '3. if (i == 5)',
-        choices: [{choicec:'1. if i = 5 then)'},{choice:'2.if i == 5 then'},{choice:'3. if (i == 5)'},{choice:'4. if i = 5'}]
+        choices: [{choice:'1. if i = 5 then)'},{choice:'2.if i == 5 then'},{choice:'3. if (i == 5)'},{choice:'4. if i = 5'}]
   },
   { q:'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
       a: '4. if (i != 5)',
