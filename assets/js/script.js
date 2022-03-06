@@ -31,52 +31,56 @@ var questions = [
     
   { q: 'What is the correct way to write a JavaScript array?', 
       a: '4. var colors = ["red", "green", "blue"] ', 
-        c: ['1. var colors = (1:"red", 2:"green", 3:"blue")', '2. var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', '3. var colors = "red", "green", "blue"  ', '4. var colors = ["red", "green", "blue"]']
+        choices: [{choice:'1. var colors = (1:"red", 2:"green", 3:"blue")'},{choice:'2. var colors = 1 = ("red"), 2 = ("green"),3 = ("blue")'},{choice:'3. var colors = "red", "green", "blue"'},{choice:'4. var colors = ["red", "green", "blue"]'}]
     },
   { q: 'Inside which HTML element do we put the JavaScript?', 
       a: '3. <script>', 
-        c: ['1. <Script>','2. <js>','3. <script>', '4. <head>']
+        choices:[{choice:'1. <Script>'},{choice:'2. <js>'},{choice:'3. <script>'},{choice:'4. <head>'}]
   },
   { q: 'What is the correct syntax for referring to an external script called "xxx.js"?',
       a: '3. <script src="xxx.js"> ', 
-        c: ['1. <script href="xxx.js">','2. <script name="xxx.js">','3. <script src="xxx.js','4. All of the Above']
+        choices: [{choice:'1. <script href="xxx.js">'},{choice:'2. <script name="xxx.js">'},{choice:'3. <script src="xxx.js'},{choice:'4. All of the Above'}]
   }, 
   { q: 'Where is the correct place to insert a JavaScript?',
       a: '3. All of the above',
-        c: ['1. The <body> section','2. The <head> section', '3. All of the above']
+        choices: [{choice:'1. The <body> section'},{choice:'2. The <head> section'}, {choice:'3. All of the above'}]
   },  
   { q: 'How do you write "Hello World" in an alert box?',
       a: '2. alert("Hello World")',
-        c: ['1. msgBox("Hello World")','2. alert("Hello World")','3. msg("Hello World")', '4. alertBox("Hello World")']
+        choices: [{choice:'1. msgBox("Hello World")'},{choice:'2. alert("Hello World")'},{choice:'3. msg("Hello World")'},{choice:'4. alertBox("Hello World")'}]
   },
   { q: 'How do you create a function in JavaScript?',
       a: '1. function myFuntion()',
-        c: ['1. fuction myFunction()','2.function:myFunction()','3.function = myFunction()']
+        choices: [{choice:'1. fuction myFunction()'},{choice:'2.function:myFunction()'},{choice:'3.function = myFunction()'}]
   },
   { q: 'How do you call a funtion named "myFunction"?',
       a: '2. myFunction()',
-        c: ['1. call funtion myFunction()','2. myFunction()','3. call myFunction()']
+        choices: [{choice:'1. call funtion myFunction()'},{choice: '2. myFunction()'},{choice:'3. call myFunction()'}]
   },
   { q: 'How to write an IF statement in JavaScript?',
       a: '3. if (i == 5)',
-        c: ['1. if i = 5 then)','2.if i == 5 then','3. if (i == 5)','4. if i = 5']
+        choices: [{choicec:'1. if i = 5 then)'},{choice:'2.if i == 5 then'},{choice:'3. if (i == 5)'},{choice:'4. if i = 5'}]
   },
   { q:'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
       a: '4. if (i != 5)',
-      c: ['1. if i <> 5','2.if (i <> 5)','3. if i =! 5 then','4. if (i != 5)']
+      choices: [{choice:'1. if i <> 5'},{choice:'2.if (i <> 5)'},{choice:'3. if i =! 5 then'},{choice:'4. if (i != 5)'}]
   },
   { q:'How does a WHILE loop start?',
       a: '1. while (i <= 10)',
-      c: ['1. while (i <= 10)','2. while i = 1 to 10','3. while (i <= 10; i++)',]
+      choices: [{choice:'1. while (i <= 10)'},{choice:'2. while i = 1 to 10'},{choice:'3. while (i <= 10; i++)'}]
   },
   { q:'How does a FOR loop start?',
       a: '2. for (i = 0; i <= 5; i++)',
-      c: ['1. for i = 1 to 5','2.for (i = 0; i <= 5; i++)','3. for (i <= 5; i++)','4.for (i = 0; i <= 5)']
+      choices: [{choice:'1. for i = 1 to 5'},{choice:'2.for (i = 0; i <= 5; i++)'},{choice:'3. for (i <= 5; i++)'},{choice:'4.for (i = 0; i <= 5)'}]
   },
   { q:'How can you add a comment in a JavaScript?',
       a: '1. //This is a comment  ',
-      c: ['1. //This is a comment','2. This is a comment','3. <!--This is a comment-->']
+      choices: [{choice:'1. //This is a comment'},{choice:'2. This is a comment'},{choice:'3. <!--This is a comment-->'}]
     },
+    {q: 'Which of the following function of String object returns the characters in a string between two indexes into the string?',
+        a: '4. substing',
+        choices: [{choice:'1. slice()'},{choice:'2. split()'},{choice:'3. substr()'},{choice:'4. substring()'}]
+},
 ];
 
   var renderStartPage = function () {

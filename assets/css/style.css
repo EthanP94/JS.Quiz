@@ -1,24 +1,25 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+* {
   box-sizing: border-box;
 }
 
 :root {
-  --primary: #0a0808c5;
-  --secondary: #8207a1;
-  --tertiary: rgb(211, 56, 144);
-  --white: rgb(255, 255, 255);
-  font-size: 62.5%;
+  --black: #000000;
+  --purple: #9932CC;
+  --teal: #008080;
+  --white: #ffff;
+  font-size: 65%;
 }
 
 body {
-  background: #ededed;
-  color: var(--secondary);
+  background: var(--black);
+  color: var(--teal);
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Exo 2', sans-serif ;
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,7 @@ header {
 
 #view-high-scores:hover {
     cursor: pointer;
-    color: var(--tertiary)
+    color: var(--teal)
 }
 
 header h4 {
@@ -39,7 +40,7 @@ header h4 {
 
 .timer {
     font-size: 2.0rem;
-    color: var(--primary);
+    color: var(--teal);
     display: inline;
     text-align: right;
     padding-right: 20px;
@@ -55,13 +56,13 @@ header h4 {
 
 
 h1 {
-  color: var(--primary);
+  color: var(--purple);
   font-size: 3.0rem;
   font-weight: bold;
 }
 
 p {
-  color: var(--primary);
+  color: var(--white);
   font-size: 2.0rem;
 }
 
@@ -95,7 +96,7 @@ p {
 }
 
 .end input:focus {
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--purple);
 }
 
 .show {
@@ -107,7 +108,7 @@ p {
 }
 
 #question {
-  color: var(--primary);
+  color: var(--purple);
   text-align: left;
   font-size: 3.0rem;
   font-weight: bold;
@@ -119,26 +120,26 @@ p {
 
 
 .btn {
-    background: var(--secondary);
+    background: var(--teal);
     color: var(--white);
     padding: 10px;
     border-radius: 10px;
     border: none;
-    box-shadow: 0 3px grey;
+    box-shadow: 0 3px var(--white);
     margin-top: 10px;
 }
 
 .btn:hover {
-    background: var(--tertiary);
+    background: var(--purple);
     border-radius: 10px;
-    box-shadow: 0 2px grey;
+    box-shadow: 0 2px var(--purple);
     cursor: pointer;
 }
 
 .btn:active {
     border: none;
     outline: none;
-    box-shadow: 0 0 grey;
+    box-shadow: 0 0 var(--white);
 }
 
 .btn:focus {
@@ -164,22 +165,21 @@ p {
 }
 
 
-
 .banner {
    font-size: 25px;
    text-align: center;
-   color: rgba(199, 187, 187, 0.8);
+   color: var(--purple);
    font-style: italic;
+   font-weight: bold;
    margin: 0 100px;
 }
 
 .banner h2 {
-  border-top: 2px solid rgba(199, 187, 187, 0.8);
+  border-top: 2px solid var(--teal);
   margin: 0 auto;
   text-align: center;
   padding-top: 5px;
 }
-
 
 
 ol {
@@ -187,12 +187,12 @@ ol {
 }
 
 li:nth-child(odd) {
-   background-color: rgba(228, 151, 164, 0.5);;
+   background-color: var(--teal);;
 }
 
 
 li {
-  font-size: 4.0em;
+  font-size: 4.0vw;
 }
 
 
