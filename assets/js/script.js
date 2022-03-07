@@ -106,7 +106,7 @@ var questions = [
 
 
 var setTime = function () {
-    timeLeft = 60;
+    timeLeft = 120;
 
 var timercheck = setInterval(function() {
     timerEl.innerText = timeLeft;
