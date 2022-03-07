@@ -30,7 +30,7 @@ var QuestionIndex = 0
 var questions = [
     
   { q: 'What is the correct way to write a JavaScript array?', 
-      a: '4. var colors = ["red", "green", "blue"] ', 
+      a: '4. var colors = ["red", "green", "blue"]', 
         choices: [{choice:'1. var colors = (1:"red", 2:"green", 3:"blue")'},{choice:'2. var colors = 1 = ("red"), 2 = ("green"),3 = ("blue")'},{choice:'3. var colors = "red", "green", "blue"'},{choice:'4. var colors = ["red", "green", "blue"]'}]
     },
   { q: 'Inside which HTML element do we put the JavaScript?', 
@@ -38,7 +38,7 @@ var questions = [
         choices:[{choice:'1. <Script>'},{choice:'2. <js>'},{choice:'3. <script>'},{choice:'4. <head>'}]
   },
   { q: 'What is the correct syntax for referring to an external script called "xxx.js"?',
-      a: '3. <script src="xxx.js"> ', 
+      a: '3. <script src="xxx.js">', 
         choices: [{choice:'1. <script href="xxx.js">'},{choice:'2. <script name="xxx.js">'},{choice:'3. <script src="xxx.js'},{choice:'4. All of the Above'}]
   }, 
   { q: 'Where is the correct place to insert a JavaScript?',
@@ -51,7 +51,7 @@ var questions = [
   },
   { q: 'How do you create a function in JavaScript?',
       a: '1. function myFuntion()',
-        choices: [{choice:'1. fuction myFunction()'},{choice:'2.function:myFunction()'},{choice:'3.function = myFunction()'}]
+        choices: [{choice:'1. function myFuntion()'},{choice:'2.function: myFunction()'},{choice:'3.function = myFunction()'}]
   },
   { q: 'How do you call a funtion named "myFunction"?',
       a: '2. myFunction()',
@@ -62,8 +62,8 @@ var questions = [
         choices: [{choice:'1. if i = 5 then)'},{choice:'2.if i == 5 then'},{choice:'3. if (i == 5)'},{choice:'4. if i = 5'}]
   },
   { q:'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
-      a: '4. if (i != 5)',
-      choices: [{choice:'1. if i <> 5'},{choice:'2.if (i <> 5)'},{choice:'3. if i =! 5 then'},{choice:'4. if (i != 5)'}]
+      a: '4. if (i!= 5)',
+      choices: [{choice:'1. if i <> 5'},{choice:'2.if (i <> 5)'},{choice:'3. if i =! 5 then'},{choice:'4. if (i!= 5)'}]
   },
   { q:'How does a WHILE loop start?',
       a: '1. while (i <= 10)',
@@ -74,7 +74,7 @@ var questions = [
       choices: [{choice:'1. for i = 1 to 5'},{choice:'2.for (i = 0; i <= 5; i++)'},{choice:'3. for (i <= 5; i++)'},{choice:'4.for (i = 0; i <= 5)'}]
   },
   { q:'How can you add a comment in a JavaScript?',
-      a: '1. //This is a comment  ',
+      a: '1. //This is a comment',
       choices: [{choice:'1. //This is a comment'},{choice:'2. This is a comment'},{choice:'3. <!--This is a comment-->'}]
     },
     {q: 'Which of the following function of String object returns the characters in a string between two indexes into the string?',
